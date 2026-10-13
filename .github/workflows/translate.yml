@@ -119,9 +119,11 @@ jobs:
             git archive origin/translations "i18n/$LANG_CODE" | tar -x || true
           fi
 
-      - name: Translate this phase's changed lessons (NLLB-200, no key)
+      - name: Translate this phase's changed lessons (Anthropic Claude)
         env:
-          TRANSLATE_PROVIDER: nllb
+          TRANSLATE_PROVIDER: anthropic
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL: claude-sonnet-5
           LANG_CODE: ${{ matrix.lang }}
           PHASE: ${{ matrix.phase }}
         run: |
