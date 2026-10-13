@@ -1,6 +1,6 @@
-# Sampling Methods
+# Методы Выборки
 
-> Sampling is how AI explores the space of possibilities.
+> Выборка — это то, как ИИ исследует пространство возможностей.
 
 **Type:** Build
 **Language:** Python
@@ -241,7 +241,7 @@ The acceptance rate is always 1 (every proposal is accepted) because sampling fr
 
 ### Temperature Sampling (Used in LLMs)
 
-Language models output logits z_1, ..., z_V for each token in the vocabulary. Softmax converts these to probabilities. Temperature rescales the logits before softmax:
+Language models output logits z_1, ..., z_V for each token in the vocabulary. softmax converts these to probabilities. Temperature rescales the logits before softmax:
 
 ```
 p_i = exp(z_i / T) / sum(exp(z_j / T))

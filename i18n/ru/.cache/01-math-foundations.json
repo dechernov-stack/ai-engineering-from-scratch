@@ -16,5 +16,8 @@
   "phases/01-math-foundations/19-complex-numbers/docs/en.md": "4452702ccd0d4c75a574644f277d6f6a6d87579f80395eccebdd211bdefbfd58",
   "phases/01-math-foundations/20-fourier-transform/docs/en.md": "88d32836b77ed732bc2e2610451d4ea5509c1b20b9bb96dddc2dd3cd0bc47cff",
   "phases/01-math-foundations/21-graph-theory/docs/en.md": "f604b6e3676d179188e0bbab407160cff0141ed22b21747339ca3b9fd28cb77f",
-  "phases/01-math-foundations/22-stochastic-processes/docs/en.md": "c0c39f418206fc6ff14a9755bd9663147c3ab4b2f35beb03edd909c746ee3fc8"
+  "phases/01-math-foundations/22-stochastic-processes/docs/en.md": "c0c39f418206fc6ff14a9755bd9663147c3ab4b2f35beb03edd909c746ee3fc8",
+  "phases/01-math-foundations/13-numerical-stability/docs/en.md": "1f803ae9c3db1ab75678a37007833c86479ef7810778c396201e3c5d91e731c6",
+  "phases/01-math-foundations/16-sampling-methods/docs/en.md": "387bb3952f9a86f59c898179ec88597a8e9719e662ecab1b6b93bd6a977c2616",
+  "phases/01-math-foundations/18-convex-optimization/docs/en.md": "061158e46d86c18ffeb43b730c98c52994ae863629445f6431942a368cfdb952"
 }

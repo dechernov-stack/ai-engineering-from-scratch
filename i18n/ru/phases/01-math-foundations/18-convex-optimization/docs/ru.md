@@ -1,6 +1,6 @@
-# Convex Optimization
+# Выпуклая оптимизация
 
-> Convex problems have one valley. Neural networks have millions. Knowing the difference matters.
+> Выпуклые задачи имеют одну впадину. Нейронные сети имеют миллионы. Знание различия важно.
 
 **Type:** Build
 **Language:** Python
@@ -28,7 +28,7 @@ Understanding convexity does three things. First, it tells you when your problem
 
 A set S is convex if for any two points in S, the line segment between them also lies entirely in S.
 
-| Convex sets | Not convex |
+| Выпуклые множества | Невыпуклые |
 |---|---|
 | **Rectangle**: any two points inside can be connected by a line segment that stays inside | **Star/crescent shape**: a line between two interior points can pass outside the set |
 | **Triangle**: same property holds for all interior points | **Donut/annulus**: the hole means some line segments leave the set |
@@ -57,7 +57,7 @@ f(tx + (1-t)y) <= t*f(x) + (1-t)*f(y)
 
 Geometrically: the line segment between any two points on the graph lies above or on the graph.
 
-| Property | Convex function | Non-convex function |
+| Property | Выпуклая функция | Невыпуклая функция |
 |---|---|---|
 | **Line segment test** | The line between any two points on the graph lies **above or on** the curve | The line between some points on the graph dips **below** the curve |
 | **Shape** | Single bowl/valley curving upward | Multiple peaks and valleys with mixed curvature |
@@ -114,7 +114,7 @@ Consequences:
 
 ### Convex vs non-convex in ML
 
-| Problem | Convex? | Why |
+| Задача | Выпуклая? | Почему |
 |---------|---------|-----|
 | Linear regression (MSE) | Yes | Loss is quadratic in weights |
 | Logistic regression | Yes | Log-loss is convex in weights |
@@ -373,7 +373,7 @@ Pure Newton's method is impractical for large models. Several approximations mak
 
 **Diagonal approximations:** Adam's second moment is a diagonal approximation of the Hessian's diagonal. AdaHessian extends this by using actual Hessian diagonal elements via Hutchinson's estimator.
 
-| Method | Memory | Per-step cost | When to use |
+| Method | Memory | Per-step cost | Когда использовать |
 |--------|--------|--------------|-------------|
 | Gradient descent | O(n) | O(n) | Baseline, large models |
 | Newton's method | O(n^2) | O(n^3) | Small convex problems |
