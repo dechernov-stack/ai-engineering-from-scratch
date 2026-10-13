@@ -229,6 +229,13 @@
       if (host) host.hidden = true;
       return;
     }
+    // A page opened via a raw ?lang=ru link (not through the dropdown) must
+    // still persist the choice, or the very next internal link navigation
+    // (which carries no ?lang=) silently reverts to English.
+    try {
+      var q = new URLSearchParams(location.search).get('lang');
+      if (supported(q)) localStorage.setItem('lang', q);
+    } catch (_) {}
     if (host) mount(host);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
