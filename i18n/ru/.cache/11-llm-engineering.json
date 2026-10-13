@@ -1,0 +1,12 @@
+{
+  "phases/11-llm-engineering/03-structured-outputs/docs/en.md": "6d310ae5ce8f771c5668d8742f1d1b1c922e738c087225d7c4b31eed492e43d7",
+  "phases/11-llm-engineering/05-context-engineering/docs/en.md": "778ebedaa18baad1af5409b500b174f1809d215fcc20a48960e8ad6324eb50a6",
+  "phases/11-llm-engineering/06-rag/docs/en.md": "03116a37ce0e9ea3f59d086a0c2cf40c621f16fd1b23351e74042d6329096419",
+  "phases/11-llm-engineering/07-advanced-rag/docs/en.md": "e0f7bf9bf7a1fa40baf3017291881cf3eb995b93696db33178c424566bbfe801",
+  "phases/11-llm-engineering/09-function-calling/docs/en.md": "30695ec65c0ada92bac742cb5a287603a340c26ed7b1674767d886f54f591b29",
+  "phases/11-llm-engineering/11-caching-cost/docs/en.md": "bec924754c74950f7a7f6e975846b477cb63cc8aec4e8942cffdb4bbbd076bd3",
+  "phases/11-llm-engineering/14-model-context-protocol/docs/en.md": "26356da586c4f90922e0ab61af4ea47d81deaf3c9b2cc91e4ae8ac44efaadd7b",
+  "phases/11-llm-engineering/15-prompt-caching/docs/en.md": "abe8cd085fc41015985f4f324a89e8193593b341855dc82bdf697e68430cc350",
+  "phases/11-llm-engineering/16-langgraph-state-machines/docs/en.md": "cd449175f7292a9821644d0b829cd0576a68f0da3aedbbc9e3547b45fd7b05cb",
+  "phases/11-llm-engineering/17-agent-framework-tradeoffs/docs/en.md": "4c0c6119addcb3cf05f3a9e1884ae3bf75e4428a6196c90982653559c94c83b7"
+}
