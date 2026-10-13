@@ -83,7 +83,9 @@
       "code": "ru",
       "name": "Russian",
       "native": "Русский",
-      "nllb": "rus_Cyrl"
+      "nllb": "rus_Cyrl",
+      "locale": "ru_RU",
+      "ci": true
     },
     {
       "code": "ja",
