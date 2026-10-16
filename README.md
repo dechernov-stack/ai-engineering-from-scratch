@@ -9,6 +9,8 @@ Implement model internals, retrieval pipelines, and agent runtimes. Test them, i
 
 **[Start learning](https://aiengineeringfromscratch.com/lesson?path=phases/00-setup-and-tooling/01-dev-environment)** · **[Choose a path](#learning-routes)** · **[Try a lab](#interactive-lab)** · **[Build a project](#project-challenges)** · **[Browse the curriculum](#contents)**
 
+> 📌 **Студент курса? Сначала прочитай [STUDENT_START_HERE.md](STUDENT_START_HERE.md)** ([PDF](STUDENT_START_HERE.pdf)) — форк, окружение, правило `my-work/`, как не сломать синхронизацию с обновлениями.
+
 Free, open source, MIT. Learn on the website, with a coding agent, or by running local code.
 
 > 528 lessons. 20 phases. Python, TypeScript, Rust, Julia.
