@@ -59,3 +59,58 @@ git merge upstream/main       # без конфликтов, если соблю
 git checkout my-progress
 git merge main
 ```
+
+## 7. Частые проблемы окружения (Mac) — проверено на реальном прохождении
+
+**`fnm install 22` ставит, но `node -v` не видит новую версию**
+Новый `eval` ещё не подхватился в текущем терминале. В ЭТОМ ЖЕ окне:
+```bash
+eval "$(fnm env --shell zsh)"
+fnm use 22
+```
+В новых терминалах сработает само (уже прописано в `.zshrc` установщиком).
+
+**`rustc`/`cargo`: command not found сразу после установки**
+Та же причина — PATH подхватится в НОВОМ терминале, либо прямо сейчас:
+```bash
+source "$HOME/.cargo/env"
+```
+
+**`pip install anthropic` → `error: externally-managed-environment`**
+Начиная с новых версий Python/Homebrew систему защищают от прямого pip. Решение — venv:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install anthropic
+```
+Активировать venv нужно в НАЧАЛЕ каждой новой терминальной сессии перед запуском Python-скриптов курса:
+```bash
+source venv/bin/activate
+```
+
+**`ModuleNotFoundError: No module named 'anthropic'` после установки**
+Пакет поставлен не в то окружение, откуда запускается скрипт — venv не активирован в этом терминале (см. выше), либо `pip`/`python3` ссылаются на разные интерпретаторы.
+
+**`npx ts-node example.ts` → `TypeError: Cannot read properties of undefined ('fileExists')`**
+Известная несовместимость `ts-node` с текущей версией TypeScript в проекте. Используй `tsx` вместо `ts-node`:
+```bash
+npx tsx example.ts
+```
+
+**`npx tsx example.ts` → `Top-level await is currently not supported with the "cjs" output format`**
+Файл использует `await` вне функции, а проект собирается как CommonJS. Либо оберни код в функцию:
+```ts
+async function main() {
+  const response = await client.messages.create({ /* ... */ });
+  console.log(response);
+}
+main();
+```
+Либо один раз включи ESM в проекте — добавь `"type": "module"` в `package.json`.
+
+**API ключ (Anthropic/OpenAI и т.п.) не найден скриптом**
+Клиент библиотеки обычно читает ключ из переменной окружения. Задать на сессию:
+```bash
+export ANTHROPIC_API_KEY="твой_ключ"
+```
+(переменная живёт только в текущем терминале — для постоянства добавь строку в `.zshrc`)
